@@ -1,1 +1,63 @@
-Hello world
+<!DOCTYPE html>
+
+<!-- BEGIN -->
+<html>
+    <head>
+        <title>Puzzicals</title>
+        <!-- Styling css -->
+        <link rel="stylesheet" href="main.css">
+
+        <!--  Fonts: Import Merriweather and Roboto     -->
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <!-- Personal scripts -->
+        <script type="text/javascript">
+            function insertSolution(fileName, html) {
+                html += "<a href=fileName id=fileName>Solution</a>"
+                return html
+            }
+
+            function puzzleClick(element) {
+                let stringName = "solution_" + String(element.id) + ".pdf"
+
+                const p = document.createElement("div")
+                
+                let link = document.createElement("a")
+                link.setAttribute("href", "assets/solutions/" + stringName)
+                link.textContent += 'Solution'
+
+                p.appendChild(link)
+
+                document.getElementById(stringName).appendChild(p);
+            }
+
+            function hello() {
+                console.log('hello')
+            }
+
+            now = Date()
+            console.log(now)
+            window.onload = hello();
+        </script>
+
+    </head>
+
+    <body>
+        <div>
+            <a onClick=puzzleClick(this) href="assets/puzzles/opening_night.pdf" id="opening_night">Opening Night</a> Fungus 2020 Christmas Present #1
+        </div>
+        <div id="solution_opening_night.pdf"></div>
+        <div>
+            <a onClick=puzzleClick(this) href="assets/puzzles/carnival_games.pdf" id="carnival_games">Carnival Games</a> Originally created for the 2020 Amazon Puzzlehunt
+        </div>
+        <div id="solution_carnival_games.pdf"></div>
+
+        <div>
+            <h5>
+                All rights reserved to the appropriate owners of property. If any party has a disagreement, please reach out and the disagreeable content will be removed. This page is a hobby project and do not represent that of my employer or any others affiliated institution.
+            </h5>
+        </div>
+    </body>
+</html>
+
+<!-- END -->
