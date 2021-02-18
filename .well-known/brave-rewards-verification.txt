@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: puzzicals.github.io
+Token: efce67e6ef64b04d1e381b527f8efdf9793494a4580c373c360c5cd34a750d80
